@@ -1,0 +1,10 @@
+!dist
+.histoire
+.turbo
+node_modules
+src
+vite.config.js
+tsconfig.json
+svelte.config.js
+histoire.config.js
+env.d.ts
