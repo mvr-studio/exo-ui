@@ -1,11 +1,8 @@
-import { ComponentFactory } from '../../../types'
-import composeBox from '../Box'
+import { flexStyles } from '@mvr-studio/exo-css'
+import { ComponentFactory } from 'types'
 
-const composeFlex = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, css })
-  return styled(Box, {
-    display: 'flex'
-  })
+const composeFlex = ({ styled }: ComponentFactory) => {
+  return styled('div', flexStyles)
 }
 
 export default composeFlex

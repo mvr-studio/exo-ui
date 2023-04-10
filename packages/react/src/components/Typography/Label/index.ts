@@ -1,16 +1,8 @@
-import { ComponentFactory } from '../../../types'
-import composeBox from '../../Layout/Box'
+import { labelStyles } from '@mvr-studio/exo-css'
+import { ComponentFactory } from 'types'
 
-const composeLabel = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, type: 'label', css })
-  return styled(Box, {
-    fontSize: '14px',
-    color: '$gray600',
-    fontWeight: '$semibold',
-    '&[for]': {
-      cursor: 'pointer'
-    }
-  })
+const composeLabel = ({ styled }: ComponentFactory) => {
+  return styled('label', labelStyles)
 }
 
 export default composeLabel

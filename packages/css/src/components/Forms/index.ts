@@ -1,1 +1,1 @@
-export { default as composeButtonCss } from './Button'
+export * from './Button'

@@ -1,16 +1,13 @@
-import composeBox from '../../Layout/Box'
-import { ComponentFactory } from '../../../types'
-import { composeInputableCss } from '@mvr-studio/exo-css'
+import { ComponentFactory } from 'types'
+import { inputableStyles } from '@mvr-studio/exo-css'
 
 interface ComposeTextareaProps extends ComponentFactory {
   type?: string
 }
 
-const composeTextarea = ({ styled, css, type = 'textarea' }: ComposeTextareaProps) => {
-  const Box = composeBox({ styled, type, css })
-  const imputable = composeInputableCss({ css })
-  return styled(Box, {
-    ...imputable,
+const composeTextarea = ({ styled }: ComposeTextareaProps) => {
+  return styled('textarea', {
+    ...inputableStyles,
     resize: 'none'
   })
 }

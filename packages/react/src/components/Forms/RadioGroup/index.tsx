@@ -18,8 +18,6 @@ const composeRadioGroupItem = ({ styled }: ComponentFactory) =>
     borderRadius: '100%',
     boxShadow: '$checkable',
     cursor: 'pointer'
-    // '&:hover': { backgroundColor: violet.violet3 },
-    // '&:focus': { boxShadow: `0 0 0 2px black` }
   })
 
 const composeRadioGroupIndicator = ({ styled }: ComponentFactory) =>

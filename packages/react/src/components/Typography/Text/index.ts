@@ -1,12 +1,8 @@
-import { ComponentFactory } from '../../../types'
-import composeBox from '../../Layout/Box'
+import { ComponentFactory } from 'types'
+import { textStyles } from '@mvr-studio/exo-css'
 
-const composeText = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, type: 'p', css })
-  return styled(Box, {
-    color: '$gray700',
-    lineHeight: '$tall'
-  })
+const composeText = ({ styled }: ComponentFactory) => {
+  return styled('p', textStyles)
 }
 
 export default composeText

@@ -1,9 +1,8 @@
-import { ComponentFactory } from '../../../types'
-import { composeBox } from '..'
+import { ComponentFactory } from 'types'
+import { gridStyles } from '@mvr-studio/exo-css'
 
-const composeGrid = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, css })
-  return styled(Box, { display: 'grid' })
+const composeGrid = ({ styled }: ComponentFactory) => {
+  return styled('div', gridStyles)
 }
 
 export default composeGrid

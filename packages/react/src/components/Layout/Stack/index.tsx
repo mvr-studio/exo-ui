@@ -1,22 +1,8 @@
-import composeBox from '../Box'
-import { ComponentFactory } from '../../../types'
+import { ComponentFactory } from 'types'
+import { stackStyles } from '@mvr-studio/exo-css'
 
-const createStack = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, css })
-  return styled(Box, {
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'flex-start',
-    alignItems: 'flex-start',
-    gap: '$sm',
-    variants: {
-      direction: {
-        horizontal: {
-          flexDirection: 'row'
-        }
-      }
-    }
-  })
+const createStack = ({ styled }: ComponentFactory): any => {
+  return styled('div', stackStyles)
 }
 
 export default createStack

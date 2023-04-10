@@ -1,1 +1,1 @@
-export { default as composeInputableCss } from './Inputable'
+export * from './Inputable'
