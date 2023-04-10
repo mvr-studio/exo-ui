@@ -35,7 +35,7 @@ export default defineConfig({
   ],
   /* Run your local dev server before starting the tests */
   webServer: {
-    command: 'yarn ladle:dev',
+    command: 'yarn story:dev',
     url: 'http://localhost:61000/exo-ui',
     reuseExistingServer: !process.env.CI
   }
