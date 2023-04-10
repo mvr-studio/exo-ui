@@ -1,0 +1,22 @@
+import { ComposerFactory } from '../../../types'
+
+const composeInputableCss = ({ css }: ComposerFactory) => {
+  return css({
+    display: 'block',
+    width: '100%',
+    borderRadius: '$md',
+    paddingLeft: '$md',
+    paddingRight: '$md',
+    paddingTop: '$sm',
+    paddingBottom: '$sm',
+    border: 'none',
+    boxShadow: '$inputDefault',
+    outline: 'none',
+    transition: 'box-shadow 0.3s ease-in-out',
+    '&:hover': { boxShadow: '$inputHover' },
+    '&:focus': { boxShadow: '$inputFocus' },
+    '&::selection': { backgroundColor: '$gray800', color: 'white' }
+  })
+}
+
+export default composeInputableCss

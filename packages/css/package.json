@@ -1,0 +1,33 @@
+{
+  "name": "@mvr-studio/exo-css",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "author": "Tomasz Marciniak <tomek@mvr.studio>",
+  "license": "MIT",
+  "scripts": {
+    "build": "rimraf dist && tsc",
+    "story:dev": "cross-env NODE_OPTIONS='--loader @esbuild-kit/esm-loader' histoire dev",
+    "story:build": "cross-env NODE_OPTIONS='--loader @esbuild-kit/esm-loader' histoire build",
+    "story:preview": "histoire preview"
+  },
+  "devDependencies": {
+    "@esbuild-kit/esm-loader": "^2.5.5",
+    "@histoire/plugin-svelte": "^0.15.9",
+    "@histoire/plugin-vue": "^0.15.8",
+    "@stitches/core": "^1.2.8",
+    "@sveltejs/kit": "^1.15.2",
+    "@sveltejs/vite-plugin-svelte": "^2.0.4",
+    "@types/chroma-js": "^2.4.0",
+    "@vitejs/plugin-vue": "^4.1.0",
+    "cross-env": "^7.0.3",
+    "histoire": "^0.15.9",
+    "svelte": "^3.58.0",
+    "vue": "^3.2.47"
+  },
+  "dependencies": {
+    "chroma-js": "^2.4.2",
+    "polished": "^4.2.2"
+  }
+}
