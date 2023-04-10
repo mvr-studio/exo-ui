@@ -43,11 +43,8 @@ jobs:
           node-version: 19.1
       - name: Install dependencies
         run: yarn install --frozen-lockfile
-      - name: Download dist from unit tests run
-        uses: actions/download-artifact@v3
-        with:
-          name: dist
-          path: packages/react/dist/
+      - name: Build Dist
+        run: yarn build
       - name: Run Unit
         run: yarn test:unit -- -- --coverage
       - name: Install Playwright Browsers
