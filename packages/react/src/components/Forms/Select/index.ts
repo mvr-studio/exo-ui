@@ -3,7 +3,7 @@ import { ComponentFactory } from '../../../types'
 import { composeBox } from '../../Layout'
 
 const composeSelect = ({ styled, css }: ComponentFactory) => {
-  const Box = composeBox({ styled, type: 'select' })
+  const Box = composeBox({ styled, type: 'select', css })
   const imputable = composeInputableCss({ css })
   return styled(Box, {
     ...imputable,

@@ -9,8 +9,9 @@
     "build": "rimraf dist && tsc",
     "test:unit": "yarn jest",
     "test:e2e": "playwright test",
-    "ladle:dev": "ladle serve",
-    "ladle:build": "ladle build"
+    "story:dev": "ladle serve",
+    "story:build": "ladle build",
+    "story:preview": "ladle preview"
   },
   "peerDependencies": {
     "@stitches/react": "^1.2",

@@ -1,8 +1,8 @@
 import { ComponentFactory } from '../../../types'
 import { composeBox } from '../../Layout'
 
-const composeLink = ({ styled }: ComponentFactory) => {
-  const Box = composeBox({ styled, type: 'a' })
+const composeLink = ({ styled, css }: ComponentFactory) => {
+  const Box = composeBox({ styled, type: 'a', css })
   return styled(Box, {
     color: 'inherit'
   })

@@ -7,7 +7,7 @@ interface ComposeTextareaProps extends ComponentFactory {
 }
 
 const composeTextarea = ({ styled, css, type = 'textarea' }: ComposeTextareaProps) => {
-  const Box = composeBox({ styled, type })
+  const Box = composeBox({ styled, type, css })
   const imputable = composeInputableCss({ css })
   return styled(Box, {
     ...imputable,

@@ -11,8 +11,8 @@ const columnsToTemplate = (columns: number | Record<string, number>) => {
   return Object.fromEntries(responsiveValues)
 }
 
-const composeSimpleGrid = ({ styled }: ComponentFactory) => {
-  const Grid = composeGrid({ styled })
+const composeSimpleGrid = ({ styled, css }: ComponentFactory) => {
+  const Grid = composeGrid({ styled, css })
   type SimpleGridProps = Parameters<typeof Grid> & {
     columns: number
     children: React.ReactNode

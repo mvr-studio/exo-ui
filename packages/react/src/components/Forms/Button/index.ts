@@ -4,7 +4,7 @@ import { composeButtonCss } from '@mvr-studio/exo-css'
 
 const composeButton = ({ styled, css }: ComponentFactory) => {
   const buttonCss = composeButtonCss({ css })
-  const Box = composeBox({ styled, type: 'button' })
+  const Box = composeBox({ styled, type: 'button', css })
   const Button = styled(Box, {
     ...buttonCss
   })

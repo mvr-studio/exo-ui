@@ -1,8 +1,8 @@
 import composeBox from '../Box'
 import { ComponentFactory } from '../../../types'
 
-const createStack = ({ styled }: ComponentFactory) => {
-  const Box = composeBox({ styled })
+const createStack = ({ styled, css }: ComponentFactory) => {
+  const Box = composeBox({ styled, css })
   return styled(Box, {
     display: 'flex',
     flexDirection: 'column',

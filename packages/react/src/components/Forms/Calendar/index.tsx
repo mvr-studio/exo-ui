@@ -7,9 +7,9 @@ import composeButton from '../Button'
 import { rgba } from 'polished'
 
 const composeCalendar = ({ styled, theme, css }: ComponentFactory) => {
-  const Flex = composeFlex({ styled })
-  const Text = composeText({ styled })
-  const Stack = composeStack({ styled })
+  const Flex = composeFlex({ styled, css })
+  const Text = composeText({ styled, css })
+  const Stack = composeStack({ styled, css })
   const Button = composeButton({ styled, css })
 
   return () => {

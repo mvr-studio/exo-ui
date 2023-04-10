@@ -10,10 +10,10 @@ export interface TooltipProps {
   label: string
 }
 
-const composeTooltip = ({ styled }: ComponentFactory) => {
-  const Text = composeText({ styled })
-  const TooltipContent = composeShowableContent({ styled, baseComponent: Tooltip.Content })
-  const TooltipArrow = composeTooltipArrow({ styled })
+const composeTooltip = ({ styled, css }: ComponentFactory) => {
+  const Text = composeText({ styled, css })
+  const TooltipContent = composeShowableContent({ styled, baseComponent: Tooltip.Content, css })
+  const TooltipArrow = composeTooltipArrow({ styled, css })
   return ({ children, label }: TooltipProps) => (
     <Tooltip.Provider>
       <Tooltip.Root>

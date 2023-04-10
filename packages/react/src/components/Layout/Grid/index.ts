@@ -1,8 +1,8 @@
 import { ComponentFactory } from '../../../types'
 import { composeBox } from '..'
 
-const composeGrid = ({ styled }: ComponentFactory) => {
-  const Box = composeBox({ styled })
+const composeGrid = ({ styled, css }: ComponentFactory) => {
+  const Box = composeBox({ styled, css })
   return styled(Box, { display: 'grid' })
 }
 

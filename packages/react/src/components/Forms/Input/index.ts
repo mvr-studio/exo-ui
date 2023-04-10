@@ -7,7 +7,7 @@ interface ComposeInputProps extends ComponentFactory {
 }
 
 const composeInput = ({ styled, type = 'input', css }: ComposeInputProps) => {
-  const Box = composeBox({ styled, type })
+  const Box = composeBox({ styled, type, css })
   const imputable = composeInputableCss({ css })
   return styled(Box, {
     ...imputable

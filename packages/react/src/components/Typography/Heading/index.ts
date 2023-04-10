@@ -1,8 +1,8 @@
 import { ComponentFactory } from '../../../types'
 import composeBox from '../../Layout/Box'
 
-const composeHeading = ({ styled }: ComponentFactory) => {
-  const Box = composeBox({ styled, type: 'h1' })
+const composeHeading = ({ styled, css }: ComponentFactory) => {
+  const Box = composeBox({ styled, type: 'h1', css })
   return styled(Box, {
     color: '$gray700',
     fontWeight: '$bold',

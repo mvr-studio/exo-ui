@@ -7,7 +7,10 @@
   ],
   "scripts": {
     "build": "turbo run build",
-    "dev": "turbo run dev",
+    "story:dev": "turbo run story:dev",
+    "story:build": "turbo run story:build",
+    "test:unit": "turbo run test:unit",
+    "test:e2e": "turbo run test:e2e",
     "lint": "turbo run lint",
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },

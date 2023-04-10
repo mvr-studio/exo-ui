@@ -9,8 +9,17 @@
     "lint": {
       "outputs": []
     },
-    "dev": {
+    "story:dev": {
       "cache": false
+    },
+    "story:build": {
+      "outputs": []
+    },
+    "test:unit": {
+      "outputs": []
+    },
+    "test:e2e": {
+      "outputs": []
     }
   }
 }
