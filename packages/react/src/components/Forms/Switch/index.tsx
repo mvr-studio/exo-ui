@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Switch from '@radix-ui/react-switch'
 import { ComponentFactory } from '../../../types'
 
@@ -32,16 +33,16 @@ const composeSwitchThumb = ({ styled }: ComponentFactory) => {
   })
 }
 
-const composeCheckbox = ({ styled }: ComponentFactory) => {
+const composeSwitch = ({ styled }: ComponentFactory) => {
   const SwitchRoot = composeSwitchRoot({ styled })
   const CheckboxSwitchThumb = composeSwitchThumb({ styled })
-  type CheckboxRootProps = Parameters<typeof SwitchRoot>
+  type SwitchRootProps = React.ComponentProps<typeof SwitchRoot>
 
-  return (props: CheckboxRootProps) => (
+  return (props: SwitchRootProps) => (
     <SwitchRoot {...props}>
       <CheckboxSwitchThumb />
     </SwitchRoot>
   )
 }
 
-export default composeCheckbox
+export default composeSwitch

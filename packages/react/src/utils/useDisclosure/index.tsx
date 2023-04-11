@@ -9,7 +9,8 @@ const useDisclosure = (defaultIsOpen = false) => {
     isOpen,
     onClose,
     onOpen,
-    onToggle
+    onToggle,
+    setIsOpen
   }
 }
 

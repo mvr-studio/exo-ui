@@ -1,3 +1,4 @@
+import React from 'react'
 import { ComponentFactory } from '../../../types'
 import * as RadioGroup from '@radix-ui/react-radio-group'
 import { IconPointFilled } from '@tabler/icons-react'
@@ -34,7 +35,7 @@ const composeRadioGroupIndicator = ({ styled }: ComponentFactory) =>
 const composeItem = ({ styled }: ComponentFactory) => {
   const RadioGroupItemRoot = composeRadioGroupItem({ styled })
   const RadioGroupIndicator = composeRadioGroupIndicator({ styled })
-  type RadioGroupItemProps = Parameters<typeof RadioGroupItemRoot> & {
+  type RadioGroupItemProps = React.ComponentProps<typeof RadioGroupItemRoot> & {
     value: string
   }
 

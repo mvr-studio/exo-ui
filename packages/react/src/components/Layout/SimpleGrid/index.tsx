@@ -1,3 +1,4 @@
+import React from 'react'
 import { CSS } from '@stitches/react'
 import { ComponentFactory } from '../../../types'
 import composeGrid from '../Grid'
@@ -13,7 +14,7 @@ const columnsToTemplate = (columns: number | Record<string, number>) => {
 
 const composeSimpleGrid = ({ styled, css }: ComponentFactory) => {
   const Grid = composeGrid({ styled, css })
-  type SimpleGridProps = Parameters<typeof Grid> & {
+  type SimpleGridProps = React.ComponentProps<typeof Grid> & {
     columns: number
     children: React.ReactNode
     css: CSS

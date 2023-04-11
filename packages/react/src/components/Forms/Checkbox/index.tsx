@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Checkbox from '@radix-ui/react-checkbox'
 import { IconCheck } from '@tabler/icons-react'
 import { ComponentFactory } from '../../../types'
@@ -32,7 +33,7 @@ const composeCheckboxIndicator = ({ styled }: ComponentFactory) => {
 const composeCheckbox = ({ styled }: ComponentFactory) => {
   const CheckboxRoot = composeCheckboxRoot({ styled })
   const CheckboxIndicator = composeCheckboxIndicator({ styled })
-  type CheckboxRootProps = Parameters<typeof CheckboxRoot>
+  type CheckboxRootProps = React.ComponentProps<typeof CheckboxRoot>
 
   return (props: CheckboxRootProps) => (
     <CheckboxRoot {...props}>

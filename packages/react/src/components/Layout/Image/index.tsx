@@ -1,3 +1,4 @@
+import React from 'react'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
 import { ComponentFactory } from '../../../types'
 
@@ -24,7 +25,7 @@ const composeImage = ({ styled }: ComponentFactory) => {
     alignItems: 'center',
     justifyContent: 'center'
   })
-  type ImageProps = Parameters<typeof ImageRoot> & {
+  type ImageProps = React.ComponentProps<typeof ImageRoot> & {
     src?: string
     fallback?: React.ReactNode
     fallbackDelay?: number
