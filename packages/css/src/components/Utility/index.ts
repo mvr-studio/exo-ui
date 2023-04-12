@@ -1,1 +1,1 @@
-export * from './Inputable'
+export * from './Inputable/index'
