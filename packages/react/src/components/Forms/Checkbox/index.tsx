@@ -30,7 +30,7 @@ const composeCheckboxIndicator = ({ styled }: ComponentFactory) => {
   })
 }
 
-const composeCheckbox = ({ styled }: ComponentFactory) => {
+export const composeCheckbox = ({ styled }: ComponentFactory) => {
   const CheckboxRoot = composeCheckboxRoot({ styled })
   const CheckboxIndicator = composeCheckboxIndicator({ styled })
   type CheckboxRootProps = React.ComponentProps<typeof CheckboxRoot>
@@ -43,5 +43,3 @@ const composeCheckbox = ({ styled }: ComponentFactory) => {
     </CheckboxRoot>
   )
 }
-
-export default composeCheckbox

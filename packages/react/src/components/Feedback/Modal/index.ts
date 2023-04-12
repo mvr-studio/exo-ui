@@ -1,7 +1,7 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { composeOverlay } from '../../Utility'
 import { ComponentFactory } from '../../../types'
-import { animation } from '../../../utils'
+import { animation } from '@mvr-studio/exo-css'
 
 export const composeModal = ({ styled }: ComponentFactory) => {
   const Overlay = composeOverlay({ styled })

@@ -33,7 +33,7 @@ const composeSwitchThumb = ({ styled }: ComponentFactory) => {
   })
 }
 
-const composeSwitch = ({ styled }: ComponentFactory) => {
+export const composeSwitch = ({ styled }: ComponentFactory) => {
   const SwitchRoot = composeSwitchRoot({ styled })
   const CheckboxSwitchThumb = composeSwitchThumb({ styled })
   type SwitchRootProps = React.ComponentProps<typeof SwitchRoot>
@@ -44,5 +44,3 @@ const composeSwitch = ({ styled }: ComponentFactory) => {
     </SwitchRoot>
   )
 }
-
-export default composeSwitch

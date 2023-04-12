@@ -144,7 +144,7 @@ export interface Returns {
 
 const clearTimeToDate = (date: Date) => clearTime(date).toDate()
 
-const useCalendar = ({
+export const useCalendar = ({
   weekStartsOn = Day.SUNDAY,
   viewing: initialViewing = new Date(),
   selected: initialSelected = [],
@@ -256,5 +256,3 @@ const useCalendar = ({
     calendar
   }
 }
-
-export default useCalendar

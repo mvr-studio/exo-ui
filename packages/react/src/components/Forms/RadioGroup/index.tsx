@@ -48,10 +48,8 @@ const composeItem = ({ styled }: ComponentFactory) => {
   )
 }
 
-const composeRadioGroup = ({ styled }: ComponentFactory) => {
+export const composeRadioGroup = ({ styled }: ComponentFactory) => {
   const Root = composeGroupRoot({ styled })
   const Item = composeItem({ styled })
   return { Root, Item }
 }
-
-export default composeRadioGroup

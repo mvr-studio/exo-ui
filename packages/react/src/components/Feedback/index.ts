@@ -1,4 +1,4 @@
-export { composeModal } from './Modal'
-export { composeDrawer } from './Drawer'
-export { default as composeTooltip } from './Tooltip'
-export { default as composePopover } from './Popover'
+export { composeModal } from './Modal/index'
+export { composeDrawer } from './Drawer/index'
+export { composeTooltip } from './Tooltip/index'
+export { composePopover } from './Popover/index'

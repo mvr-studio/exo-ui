@@ -6,8 +6,6 @@ interface BoxFactory extends ComponentFactory {
   type?: string
 }
 
-const composeBox = ({ styled, type = 'div' }: BoxFactory) => {
+export const composeBox = ({ styled, type = 'div' }: BoxFactory) => {
   return styled(type as unknown as ComponentType<any>, boxStyles)
 }
-
-export default composeBox

@@ -1,7 +1,7 @@
 import React from 'react'
 import { CSS } from '@stitches/react'
 import { ComponentFactory } from '../../../types'
-import composeGrid from '../Grid'
+import { composeGrid } from '../Grid'
 
 const columnsToTemplate = (columns: number | Record<string, number>) => {
   if (typeof columns === 'number') return `repeat(${columns}, minmax(0, 1fr))`
@@ -12,7 +12,7 @@ const columnsToTemplate = (columns: number | Record<string, number>) => {
   return Object.fromEntries(responsiveValues)
 }
 
-const composeSimpleGrid = ({ styled, css }: ComponentFactory) => {
+export const composeSimpleGrid = ({ styled, css }: ComponentFactory) => {
   const Grid = composeGrid({ styled, css })
   type SimpleGridProps = React.ComponentProps<typeof Grid> & {
     columns: number
@@ -29,5 +29,3 @@ const composeSimpleGrid = ({ styled, css }: ComponentFactory) => {
     )
   }
 }
-
-export default composeSimpleGrid

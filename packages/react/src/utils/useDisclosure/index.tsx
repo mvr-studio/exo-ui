@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-const useDisclosure = (defaultIsOpen = false) => {
+export const useDisclosure = (defaultIsOpen = false) => {
   const [isOpen, setIsOpen] = useState(defaultIsOpen)
   const onClose = () => setIsOpen(false)
   const onOpen = () => setIsOpen(true)
@@ -13,5 +13,3 @@ const useDisclosure = (defaultIsOpen = false) => {
     setIsOpen
   }
 }
-
-export default useDisclosure

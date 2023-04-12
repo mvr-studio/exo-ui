@@ -5,8 +5,6 @@ interface ComposeInputProps extends ComponentFactory {
   type?: string
 }
 
-const composeInput = ({ styled }: ComposeInputProps) => {
+export const composeInput = ({ styled }: ComposeInputProps) => {
   return styled('input', inputableStyles)
 }
-
-export default composeInput

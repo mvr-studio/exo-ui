@@ -5,11 +5,9 @@ interface ComposeTextareaProps extends ComponentFactory {
   type?: string
 }
 
-const composeTextarea = ({ styled }: ComposeTextareaProps) => {
+export const composeTextarea = ({ styled }: ComposeTextareaProps) => {
   return styled('textarea', {
     ...inputableStyles,
     resize: 'none'
   })
 }
-
-export default composeTextarea

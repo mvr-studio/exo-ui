@@ -1,8 +1,8 @@
 import { createStitches } from '@stitches/react'
 import { composeExoTheme } from '@mvr-studio/exo-css'
-import { useDisclosure } from './utils'
+import * as utils from './utils/index'
 import * as types from './types'
-import * as components from './components'
+import * as components from './components/index'
 
 export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
   const exoTheme = composeExoTheme(themeProps)
@@ -36,7 +36,7 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     styled,
     theme,
     css,
-    useDisclosure,
+    ...utils,
     ...styledComponents
   }
 }

@@ -1,33 +1,20 @@
+import React from 'react'
 import { composeFlex, composeStack } from '../../Layout'
 import { composeText } from '../../Typography'
 import dayjs from 'dayjs'
 import { ComponentFactory } from '../../../types'
 import { useCalendar } from '../../../utils'
-import composeButton from '../Button'
+import { composeButton } from '../Button'
 import { rgba } from 'polished'
 
-const composeCalendar = ({ styled, theme, css }: ComponentFactory) => {
+export const composeCalendar = ({ styled, theme, css }: ComponentFactory) => {
   const Flex = composeFlex({ styled, css })
   const Text = composeText({ styled, css })
   const Stack = composeStack({ styled, css })
   const Button = composeButton({ styled, css })
 
   return () => {
-    const {
-      calendar,
-      clearSelected,
-      clearTime,
-      inRange,
-      isSelected,
-      select,
-      selected,
-      setViewing,
-      toggle,
-      viewing,
-      viewNextMonth,
-      viewPreviousMonth,
-      viewToday
-    } = useCalendar()
+    const { calendar, inRange, isSelected, toggle, viewing, viewNextMonth, viewPreviousMonth } = useCalendar()
 
     return (
       <Stack css={{ gap: '$xs' }}>
@@ -100,5 +87,3 @@ const composeCalendar = ({ styled, theme, css }: ComponentFactory) => {
     )
   }
 }
-
-export default composeCalendar

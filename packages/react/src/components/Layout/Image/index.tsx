@@ -2,7 +2,7 @@ import React from 'react'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
 import { ComponentFactory } from '../../../types'
 
-const composeImage = ({ styled }: ComponentFactory) => {
+export const composeImage = ({ styled }: ComponentFactory) => {
   const ImageRoot = styled(AvatarPrimitive.Root, {
     unset: 'all',
     display: 'flex',
@@ -37,5 +37,3 @@ const composeImage = ({ styled }: ComponentFactory) => {
     </ImageRoot>
   )
 }
-
-export default composeImage

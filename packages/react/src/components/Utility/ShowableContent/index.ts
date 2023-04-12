@@ -5,7 +5,7 @@ interface ShowableContentProps extends ComponentFactory {
   baseComponent: ComponentType<any>
 }
 
-const composeShowableContent = ({ styled, baseComponent }: ShowableContentProps) =>
+export const composeShowableContent = ({ styled, baseComponent }: ShowableContentProps) =>
   styled(baseComponent, {
     display: 'flex',
     position: 'relative',
@@ -17,5 +17,3 @@ const composeShowableContent = ({ styled, baseComponent }: ShowableContentProps)
     paddingY: '$sm',
     borderRadius: '$md'
   })
-
-export default composeShowableContent

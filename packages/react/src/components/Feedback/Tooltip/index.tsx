@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Tooltip from '@radix-ui/react-tooltip'
 import { ComponentFactory } from '../../../types'
 import { composeText } from '../../Typography'
@@ -10,7 +11,7 @@ export interface TooltipProps {
   label: string
 }
 
-const composeTooltip = ({ styled, css }: ComponentFactory) => {
+export const composeTooltip = ({ styled, css }: ComponentFactory) => {
   const Text = composeText({ styled, css })
   const TooltipContent = composeShowableContent({ styled, baseComponent: Tooltip.Content, css })
   const TooltipArrow = composeTooltipArrow({ styled, css })
@@ -30,5 +31,3 @@ const composeTooltip = ({ styled, css }: ComponentFactory) => {
     </Tooltip.Provider>
   )
 }
-
-export default composeTooltip

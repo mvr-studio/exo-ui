@@ -1,3 +1,4 @@
+import React from 'react'
 import * as Popover from '@radix-ui/react-popover'
 import { IconX } from '@tabler/icons-react'
 import { ComponentFactory } from '../../../types'
@@ -13,7 +14,7 @@ export interface PopoverProps {
   content: React.ReactNode
 }
 
-const composePopover = ({ styled, css }: ComponentFactory) => {
+export const composePopover = ({ styled, css }: ComponentFactory) => {
   const PopoverContent = composeShowableContent({ styled, baseComponent: Popover.Content })
   const PopoverArrow = composePopoverArrow({ styled })
   const PopoverClose = composePopoverClose({ styled })
@@ -35,5 +36,3 @@ const composePopover = ({ styled, css }: ComponentFactory) => {
     </Popover.Root>
   )
 }
-
-export default composePopover

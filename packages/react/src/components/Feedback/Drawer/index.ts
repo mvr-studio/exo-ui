@@ -1,7 +1,7 @@
 import * as Dialog from '@radix-ui/react-dialog'
 import { ComponentFactory } from '../../../types'
-import { animation } from '../../../utils'
-import { composeOverlay } from '../../Utility'
+import { animation } from '@mvr-studio/exo-css'
+import { composeOverlay } from '../../Utility/index'
 
 const commonMobileStyles = {
   top: 0,

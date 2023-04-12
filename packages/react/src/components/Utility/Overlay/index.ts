@@ -1,14 +1,7 @@
 import { ComponentFactory } from '../../../types'
-import Dialog from '@radix-ui/react-dialog'
-import { animation } from '../../../utils'
+import * as Dialog from '@radix-ui/react-dialog'
+import { overlayStyles } from '@mvr-studio/exo-css'
 
-const composeOverlay = ({ styled }: ComponentFactory) =>
-  styled(Dialog.Overlay, {
-    position: 'fixed',
-    inset: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.1)',
-    animation: `${animation.fadeIn} 0.2s cubic-bezier(0.16, 1, 0.3, 1)`,
-    zIndex: 1
-  })
-
-export default composeOverlay
+export const composeOverlay = ({ styled }: ComponentFactory) => {
+  return styled(Dialog.Overlay, overlayStyles)
+}
