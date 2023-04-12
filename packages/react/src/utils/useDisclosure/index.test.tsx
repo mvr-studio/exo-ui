@@ -1,6 +1,6 @@
 import { act } from '@testing-library/react'
 import { renderHook } from '@testing-library/react-hooks'
-import useDisclosure from '.'
+import { useDisclosure } from '.'
 
 test('initial state', () => {
   const { result } = renderHook(() => useDisclosure())
