@@ -1,9 +1,9 @@
 import { ComponentFactory } from '../../../types'
-import { Overlay } from '@radix-ui/react-dialog'
+import Dialog from '@radix-ui/react-dialog'
 import { animation } from '../../../utils'
 
 const composeOverlay = ({ styled }: ComponentFactory) =>
-  styled(Overlay, {
+  styled(Dialog.Overlay, {
     position: 'fixed',
     inset: 0,
     backgroundColor: 'rgba(0, 0, 0, 0.1)',

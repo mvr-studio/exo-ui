@@ -1,6 +1,6 @@
 {
   "name": "@mvr-studio/exo-ui",
-  "version": "0.0.5",
+  "version": "0.0.9",
   "author": "Tomasz Marciniak <tomek@mvr.studio>",
   "type": "module",
   "main": "dist/index.cjs",
@@ -27,7 +27,7 @@
     "react-dom": "^18"
   },
   "dependencies": {
-    "@mvr-studio/exo-css": "*",
+    "@mvr-studio/exo-css": "^0.0.3",
     "@radix-ui/react-aspect-ratio": "^1.0.2",
     "@radix-ui/react-avatar": "^1.0.2",
     "@radix-ui/react-checkbox": "^1.0.3",
