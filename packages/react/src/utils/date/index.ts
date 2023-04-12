@@ -1,5 +1,5 @@
 import dayjs from 'dayjs'
-import isBetween from 'dayjs/plugin/isBetween'
+import isBetween from 'dayjs/plugin/isBetween.js'
 dayjs.extend(isBetween)
 
 export interface InRangeProps {
