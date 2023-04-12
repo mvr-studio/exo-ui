@@ -16,10 +16,10 @@
     "format": "prettier --write \"**/*.{ts,tsx,md}\""
   },
   "devDependencies": {
-    "typescript": "^5.0.4",
     "prettier": "^2.8.7",
-    "rimraf": "^3.0.2",
-    "turbo": "latest"
+    "tsup": "^6.7.0",
+    "turbo": "latest",
+    "typescript": "^5.0.4"
   },
   "engines": {
     "node": ">=14.0.0"

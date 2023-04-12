@@ -1,4 +1,4 @@
-import { ComposerFactory } from 'types'
+import { ComposerFactory } from '../../../types'
 import { boxStyles } from '../../Layout'
 
 export const buttonStyles = {

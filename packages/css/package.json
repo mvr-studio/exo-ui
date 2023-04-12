@@ -1,15 +1,23 @@
 {
   "name": "@mvr-studio/exo-css",
-  "version": "0.0.1",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
-  "type": "module",
+  "version": "0.0.2",
   "author": "Tomasz Marciniak <tomek@mvr.studio>",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/index.cjs",
+  "module": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
   "scripts": {
-    "build": "rimraf dist && tsc",
-    "story:dev": "cross-env NODE_OPTIONS='--loader @esbuild-kit/esm-loader' histoire dev",
-    "story:build": "cross-env NODE_OPTIONS='--loader @esbuild-kit/esm-loader' histoire build",
+    "build": "tsup",
+    "story:dev": "histoire dev",
+    "story:build": "histoire build",
     "story:preview": "histoire preview"
   },
   "devDependencies": {

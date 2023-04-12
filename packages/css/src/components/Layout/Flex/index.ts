@@ -1,4 +1,4 @@
-import { ComposerFactory } from 'types'
+import { ComposerFactory } from '../../../types'
 import { boxStyles } from '../Box'
 
 export const flexStyles = {

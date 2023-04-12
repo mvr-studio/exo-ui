@@ -1,5 +1,5 @@
 import { boxStyles } from '../../'
-import { ComposerFactory } from 'types'
+import { ComposerFactory } from '../../../types'
 
 export const textStyles = {
   ...boxStyles,

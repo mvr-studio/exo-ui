@@ -1,5 +1,5 @@
 import { ComponentType } from 'react'
-import { ComponentFactory } from 'types'
+import { ComponentFactory } from '../../../types'
 import { boxStyles } from '@mvr-studio/exo-css'
 
 interface BoxFactory extends ComponentFactory {

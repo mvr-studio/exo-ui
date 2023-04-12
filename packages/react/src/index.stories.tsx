@@ -1,6 +1,5 @@
-import React from 'react'
 import { Story, StoryDefault } from '@ladle/react'
-import { createExoUi } from '../'
+import { createExoUi } from './'
 import { Sandpack } from '@codesandbox/sandpack-react'
 import dedent from 'dedent'
 

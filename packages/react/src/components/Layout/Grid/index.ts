@@ -1,4 +1,4 @@
-import { ComponentFactory } from 'types'
+import { ComponentFactory } from '../../../types'
 import { gridStyles } from '@mvr-studio/exo-css'
 
 const composeGrid = ({ styled }: ComponentFactory) => {

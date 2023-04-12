@@ -1,5 +1,5 @@
 import { inputableStyles } from '@mvr-studio/exo-css'
-import { ComponentFactory } from 'types'
+import { ComponentFactory } from '../../../types'
 
 const composeSelect = ({ styled }: ComponentFactory) => {
   return styled('select', {

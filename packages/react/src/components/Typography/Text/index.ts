@@ -1,4 +1,4 @@
-import { ComponentFactory } from 'types'
+import { ComponentFactory } from '../../../types'
 import { textStyles } from '@mvr-studio/exo-css'
 
 const composeText = ({ styled }: ComponentFactory) => {

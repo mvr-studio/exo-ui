@@ -1,4 +1,4 @@
-import { ComponentFactory } from 'types'
+import { ComponentFactory } from '../../../types'
 import { buttonStyles } from '@mvr-studio/exo-css'
 
 const composeButton = ({ styled }: ComponentFactory) => {
