@@ -30,7 +30,8 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     Image: components.composeImage({ styled, css, theme }),
     Link: components.composeLink({ styled, css, theme }),
     Switch: components.composeSwitch({ styled, css, theme }),
-    Textarea: components.composeTextarea({ styled, css, theme })
+    Textarea: components.composeTextarea({ styled, css, theme }),
+    Spinner: components.composeSpinner({ styled, css })
   }
   return {
     styled,

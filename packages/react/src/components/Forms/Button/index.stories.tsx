@@ -11,6 +11,17 @@ export const Default: Story = () => {
   )
 }
 
+export const Loading: Story = () => {
+  const { Box, Button, Spinner } = createExoUi()
+  return (
+    <Box css={{ maxWidth: '16rem' }}>
+      <Button disabled>
+        <Spinner css={{ width: '1rem', height: '1rem', '&:before': { borderWidth: '2px' } }} />
+      </Button>
+    </Box>
+  )
+}
+
 export const SizeVariants: Story = () => {
   const { Stack, Button } = createExoUi()
   return (
