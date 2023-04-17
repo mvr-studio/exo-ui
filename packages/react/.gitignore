@@ -1,6 +1,6 @@
 coverage
 build
-e2e
+!e2e
 
 # Logs
 logs
