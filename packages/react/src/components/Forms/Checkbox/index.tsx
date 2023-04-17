@@ -7,7 +7,7 @@ const composeCheckboxRoot = ({ styled }: ComponentFactory) => {
   return styled(Checkbox.Root, {
     all: 'unset',
     boxSizing: 'border-box',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--checkbox-background)',
     width: '1.5rem',
     height: '1.5rem',
     borderRadius: '$md',
@@ -25,7 +25,7 @@ const composeCheckboxIndicator = ({ styled }: ComponentFactory) => {
     display: 'flex',
     justifyContent: 'center',
     alignItems: 'center',
-    color: '$primary400',
+    color: 'var(--checkbox-indicator)',
     width: '100%'
   })
 }

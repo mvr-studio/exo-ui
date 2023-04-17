@@ -1,6 +1,6 @@
 {
   "name": "@mvr-studio/exo-css",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "author": "Tomasz Marciniak <tomek@mvr.studio>",
   "license": "MIT",
   "type": "module",
@@ -16,6 +16,7 @@
   },
   "scripts": {
     "build": "tsup",
+    "dev": "tsup --watch",
     "story:dev": "histoire dev",
     "story:build": "histoire build",
     "story:preview": "histoire preview"

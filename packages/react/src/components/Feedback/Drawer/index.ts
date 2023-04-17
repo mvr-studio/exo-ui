@@ -44,7 +44,7 @@ export const composeDrawer = ({ styled }: ComponentFactory) => {
   const Content = styled(Dialog.Content, {
     unset: 'all',
     boxSizing: 'border-box',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--background-e1)',
     position: 'fixed',
     height: '100%',
     width: '100%',

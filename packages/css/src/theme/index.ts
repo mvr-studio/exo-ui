@@ -2,7 +2,7 @@ import { ConfigType } from '@stitches/react/types/config'
 import { type CreateExpoThemeProps } from '../types'
 import { createColorScale } from './colors'
 import utils from './utils'
-import { createStitches } from '@stitches/core'
+import { createStitches, globalCss } from '@stitches/core'
 
 const FALLBACK_DEFAULT_PRIMARY_COLOR = '#2a26ff'
 
@@ -13,15 +13,76 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
   const secondaryColorScale = themeProps?.secondaryColor
     ? createColorScale('secondary', themeProps?.secondaryColor)
     : {}
+  const grayColorScale = createColorScale('gray', '#454752')
 
   const colors = {
     white: '#ffffff',
     black: '#000000',
-    ...createColorScale('gray', '#4d588a'),
+    ...grayColorScale,
     ...primaryColorScale,
     ...secondaryColorScale,
     ...themeProps?.colors
   } as Record<string, string>
+
+  const lightThemeVariables = {
+    '--default-text-color': colors.gray700,
+    '--default-text-body-color': colors.gray600,
+    '--default-button-background': colors.gray100,
+    '--default-button-background-hover': colors.gray200,
+    '--default-button-background-active': colors.gray300,
+    '--default-button-text-color': colors.gray700,
+    '--primary-button-background': colors.primary400,
+    '--primary-button-background-hover': colors.primary500,
+    '--primary-button-background-active': colors.primary600,
+    '--primary-button-text-color': colors.gray50,
+    '--default-input-background': colors.white,
+    '--default-input-border-default': colors.gray300,
+    '--default-input-border-active': colors.primary400,
+    '--checkbox-background': colors.white,
+    '--checkbox-indicator': colors.primary400,
+    '--switch-background': colors.gray200,
+    '--background-e0': colors.white,
+    '--background-e1': colors.white,
+    '--background-e2': colors.gray50,
+    '--select-background': `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='grey' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><path d='M6 9l6 6l6 -6' /></svg>");`
+  }
+
+  const darkThemeVariables = {
+    '--default-text-color': colors.gray50,
+    '--default-text-body-color': colors.gray100,
+    '--default-button-background': colors.gray700,
+    '--default-button-background-hover': colors.gray600,
+    '--default-button-background-active': colors.gray500,
+    '--default-button-text-color': colors.gray100,
+    '--primary-button-background': colors.primary300,
+    '--primary-button-background-hover': colors.primary200,
+    '--primary-button-background-active': colors.primary100,
+    '--primary-button-text-color': colors.gray700,
+    '--default-input-background': colors.gray800,
+    '--default-input-border-default': colors.gray500,
+    '--default-input-border-active': colors.primary300,
+    '--checkbox-background': colors.gray600,
+    '--checkbox-indicator': colors.primary200,
+    '--switch-background': colors.gray600,
+    '--background-e0': colors.gray900,
+    '--background-e1': colors.gray800,
+    '--background-e2': colors.gray700,
+    '--select-background': `url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' stroke-width='2' stroke='grey' fill='none' stroke-linecap='round' stroke-linejoin='round'><path stroke='none' d='M0 0h24v24H0z' fill='none'/><path d='M6 9l6 6l6 -6' /></svg>");`
+  }
+
+  const globalStyles = globalCss({
+    html: {
+      '@media (prefers-color-scheme: dark)': darkThemeVariables,
+      ...lightThemeVariables
+    },
+    body: {
+      color: 'var(--default-text-color)'
+    },
+    'html.dark': darkThemeVariables,
+    'html[data-theme="dark"]': darkThemeVariables
+  })
+
+  globalStyles()
 
   return {
     theme: {
@@ -120,11 +181,11 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
       },
       shadows: {
         md: '0 0.5rem 0.5rem rgba(0, 0, 0, 0.05)',
-        checkable: '0 0.125rem 0.25rem rgba(0, 0, 0, 0.25)',
+        checkable: '0 0.125rem 0.25rem rgba(0, 0, 0, 0.2)',
         tooltip: '0 0 0.5rem rgba(0, 0, 0, 0.2)',
-        inputDefault: `0 0 0 1px ${colors?.gray300}`,
-        inputHover: `0 0 0 1px ${colors?.primary500}`,
-        inputFocus: `0 0 0 2px ${colors?.primary500}`
+        inputDefault: `0 0 0 1px var(--default-input-border-default)`,
+        inputHover: `0 0 0 1px var(--default-input-border-active)`,
+        inputFocus: `0 0 0 2px var(--default-input-border-active)`
       },
       zIndices: {
         hide: -1,

@@ -8,7 +8,7 @@ export const composeModal = ({ styled }: ComponentFactory) => {
   const Content = styled(Dialog.Content, {
     unset: 'all',
     boxSizing: 'border-box',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--background-e1)',
     position: 'fixed',
     top: '50%',
     left: '50%',

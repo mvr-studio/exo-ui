@@ -11,7 +11,7 @@ export const composeShowableContent = ({ styled, baseComponent }: ShowableConten
     position: 'relative',
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--background-e2)',
     boxShadow: '$tooltip',
     paddingX: '$md',
     paddingY: '$sm',

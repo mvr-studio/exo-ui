@@ -17,7 +17,7 @@ export const spinnerStyles = {
     inset: 0,
     borderRadius: '50%',
     border: '5px solid',
-    borderColor: '$gray700',
+    borderColor: 'var(--checkbox-indicator)',
     animation: `${prixClipFix} 2s linear infinite`
   }
 }

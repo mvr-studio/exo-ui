@@ -4,11 +4,11 @@ import { boxStyles } from '../../Layout'
 export const buttonStyles = {
   ...boxStyles,
   display: 'inline-flex',
-  color: '$gray700',
+  color: 'var(--default-button-text-color)',
   alignItems: 'center',
   justifyContent: 'center',
   borderRadius: '$md',
-  backgroundColor: '$gray100',
+  backgroundColor: 'var(--default-button-background)',
   paddingLeft: '$md',
   paddingRight: '$md',
   paddingTop: '$sm',
@@ -22,10 +22,10 @@ export const buttonStyles = {
     cursor: 'not-allowed'
   },
   '&:hover': {
-    backgroundColor: '$gray200'
+    backgroundColor: 'var(--default-button-background-hover)'
   },
   '&:active': {
-    backgroundColor: '$gray300'
+    backgroundColor: 'var(--default-button-background-active)'
   },
   variants: {
     size: {
@@ -45,22 +45,22 @@ export const buttonStyles = {
     },
     scheme: {
       primary: {
-        backgroundColor: '$primary500',
-        color: 'white',
+        backgroundColor: 'var(--primary-button-background)',
+        color: 'var(--primary-button-text-color)',
         '&:hover': {
-          backgroundColor: '$primary600'
+          backgroundColor: 'var(--primary-button-background-hover)'
         },
         '&:active': {
-          backgroundColor: '$primary700'
+          backgroundColor: 'var(--primary-button-background-active)'
         }
       },
       ghost: {
         backgroundColor: 'transparent',
         '&:hover': {
-          backgroundColor: '$gray100'
+          backgroundColor: 'var(--default-button-background-hover)'
         },
         '&:active': {
-          backgroundColor: '$gray200'
+          backgroundColor: 'var(--default-button-background-active)'
         }
       }
     }

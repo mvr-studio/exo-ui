@@ -5,7 +5,7 @@ import { ComponentFactory } from '../../../types'
 import { composeButton } from '../../Forms'
 import { composeShowableContent } from '../../Utility'
 
-const composePopoverArrow = ({ styled }: ComponentFactory) => styled(Popover.Arrow, { fill: 'white' })
+const composePopoverArrow = ({ styled }: ComponentFactory) => styled(Popover.Arrow, { fill: 'var(--background-e2)' })
 const composePopoverClose = ({ styled }: ComponentFactory) =>
   styled(Popover.Close, { all: 'unset', top: '0.25rem', right: '0.25rem', position: 'absolute' })
 

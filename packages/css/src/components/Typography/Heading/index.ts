@@ -3,7 +3,6 @@ import { ComposerFactory } from '../../../types'
 
 export const headingStyles = {
   ...boxStyles,
-  color: '$gray700',
   fontWeight: '$bold',
   fontSize: '$2xl',
   variants: {

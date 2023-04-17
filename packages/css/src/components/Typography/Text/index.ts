@@ -3,7 +3,7 @@ import { ComposerFactory } from '../../../types'
 
 export const textStyles = {
   ...boxStyles,
-  color: '$gray700',
+  color: 'var(--default-text-body-color)',
   lineHeight: '$tall'
 }
 

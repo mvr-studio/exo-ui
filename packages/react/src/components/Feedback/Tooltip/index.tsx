@@ -4,7 +4,7 @@ import { ComponentFactory } from '../../../types'
 import { composeText } from '../../Typography'
 import { composeShowableContent } from '../../Utility'
 
-const composeTooltipArrow = ({ styled }: ComponentFactory) => styled(Tooltip.Arrow, { fill: 'white' })
+const composeTooltipArrow = ({ styled }: ComponentFactory) => styled(Tooltip.Arrow, { fill: 'var(--background-e2)' })
 
 export interface TooltipProps {
   children: React.ReactNode

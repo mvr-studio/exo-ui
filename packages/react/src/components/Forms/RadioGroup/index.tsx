@@ -13,7 +13,7 @@ const composeGroupRoot = ({ styled }: ComponentFactory) =>
 const composeRadioGroupItem = ({ styled }: ComponentFactory) =>
   styled(RadioGroup.Item, {
     all: 'unset',
-    backgroundColor: 'white',
+    backgroundColor: 'var(--checkbox-background)',
     width: 25,
     height: 25,
     borderRadius: '100%',
@@ -29,7 +29,7 @@ const composeRadioGroupIndicator = ({ styled }: ComponentFactory) =>
     width: '100%',
     height: '100%',
     position: 'relative',
-    color: '$primary400'
+    color: 'var(--checkbox-indicator)'
   })
 
 const composeItem = ({ styled }: ComponentFactory) => {

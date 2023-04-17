@@ -6,7 +6,7 @@ const composeSwitchRoot = ({ styled }: ComponentFactory) => {
   return styled(Switch.Root, {
     all: 'unset',
     boxSizing: 'border-box',
-    backgroundColor: '$gray100',
+    backgroundColor: 'var(--switch-background)',
     width: '3rem',
     height: '1.5rem',
     borderRadius: '9999px',

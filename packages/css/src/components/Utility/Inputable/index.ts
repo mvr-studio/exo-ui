@@ -14,6 +14,7 @@ export const inputableStyles = {
   boxShadow: '$inputDefault',
   outline: 'none',
   transition: 'box-shadow 0.3s ease-in-out',
+  backgroundColor: 'var(--default-input-background)',
   '&:hover': { boxShadow: '$inputHover' },
   '&:focus': { boxShadow: '$inputFocus' },
   '&::selection': { backgroundColor: '$gray800', color: 'white' }
