@@ -8,9 +8,9 @@ export const composeContainer = ({ styled }: ComponentFactory) => {
   const Flex = composeFlex({ styled })
   type FlexProps = React.ComponentProps<typeof Flex>
 
-  return (flexProps: FlexProps) => (
+  return ({ children, ...flexProps }: FlexProps) => (
     <Flex {...flexProps} css={{ ...flexProps.css, justifyContent: 'center', alignItems: 'center', maxWidth: 'auto' }}>
-      <Box css={{ maxWidth: flexProps.css?.maxWidth || '$containerLg', width: '100%' }}>{flexProps.children}</Box>
+      <Box css={{ maxWidth: flexProps.css?.maxWidth || '$containerLg', width: '100%' }}>{children}</Box>
     </Flex>
   )
 }

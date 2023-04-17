@@ -6,7 +6,7 @@ import * as components from './components/index'
 
 export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
   const exoTheme = composeExoTheme(themeProps)
-  const { styled, css, theme } = createStitches(exoTheme)
+  const { styled, css, theme, getCssText } = createStitches(exoTheme)
   const styledComponents = {
     Box: components.composeBox({ styled, css, theme }),
     Flex: components.composeFlex({ styled, css, theme }),
@@ -38,6 +38,7 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     styled,
     theme,
     css,
+    getCssText,
     ...utils,
     ...styledComponents
   }
