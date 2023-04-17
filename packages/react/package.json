@@ -18,7 +18,7 @@
     "test:unit": "yarn jest",
     "test:e2e": "playwright test",
     "story:dev": "ladle serve",
-    "story:build": "ladle build",
+    "story:build": "ladle build -o ./build",
     "story:preview": "ladle preview"
   },
   "peerDependencies": {
