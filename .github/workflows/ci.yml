@@ -37,8 +37,8 @@ jobs:
           path: |
             packages/react/playwright-report/
             packages/react/coverage/
-            - name: Build Ladle
-            run: yarn story:build
+      - name: Build Ladle
+        run: yarn story:build
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Upload artifact
