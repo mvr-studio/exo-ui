@@ -31,7 +31,8 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     Link: components.composeLink({ styled, css, theme }),
     Switch: components.composeSwitch({ styled, css, theme }),
     Textarea: components.composeTextarea({ styled, css, theme }),
-    Spinner: components.composeSpinner({ styled, css })
+    Spinner: components.composeSpinner({ styled, css }),
+    Container: components.composeContainer({ styled, css })
   }
   return {
     styled,

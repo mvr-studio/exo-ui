@@ -161,10 +161,10 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
         '6xl': '72rem',
         '7xl': '80rem',
         '8xl': '90rem',
-        'container.sm': '640px',
-        'container.md': '768px',
-        'container.lg': '1024px',
-        'container.xl': '1280px'
+        containerSm: '640px',
+        containerMd: '768px',
+        containerLg: '1024px',
+        containerXl: '1280px'
       },
       borderWidths: {},
       borderStyles: {},
