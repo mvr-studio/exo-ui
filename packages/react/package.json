@@ -28,7 +28,7 @@
     "react-dom": "^18"
   },
   "dependencies": {
-    "@mvr-studio/exo-css": "^0.0.6",
+    "@mvr-studio/exo-css": "^0.0.7",
     "@radix-ui/react-aspect-ratio": "^1.0.2",
     "@radix-ui/react-avatar": "^1.0.2",
     "@radix-ui/react-checkbox": "^1.0.3",
