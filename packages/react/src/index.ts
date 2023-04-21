@@ -34,7 +34,8 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     Spinner: components.composeSpinner({ styled, css }),
     Container: components.composeContainer({ styled, css }),
     Content: components.composeContent({ styled }),
-    Card: components.composeCard({ styled })
+    Card: components.composeCard({ styled }),
+    Skeleton: components.composeSkeleton({ styled })
   }
   return {
     styled,

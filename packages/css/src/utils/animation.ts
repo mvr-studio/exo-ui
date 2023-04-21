@@ -77,3 +77,9 @@ export const prixClipFix = keyframes({
   '75%': { clipPath: 'polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 100%)' },
   '100%': { clipPath: 'polygon(50% 50%,0 0,100% 0,100% 100%,0 100%,0 0)' }
 })
+
+export const loading = keyframes({
+  to: {
+    backgroundPosition: 'left'
+  }
+})

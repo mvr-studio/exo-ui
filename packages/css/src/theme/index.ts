@@ -25,6 +25,7 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
   } as Record<string, string>
 
   const lightThemeVariables = {
+    '--skeleton-highlight': colors.white,
     '--outline-color': colors.gray200,
     '--outline-color-light': colors.gray50,
     '--link-color': colors.primary400,
@@ -51,6 +52,7 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
   }
 
   const darkThemeVariables = {
+    '--skeleton-highlight': colors.gray500,
     '--outline-color': colors.gray500,
     '--outline-color-light': colors.gray700,
     '--link-color': colors.primary200,
