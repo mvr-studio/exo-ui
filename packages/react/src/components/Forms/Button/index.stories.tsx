@@ -39,6 +39,7 @@ export const SchemeVariants: Story = () => {
     <Stack direction="horizontal" css={{ gap: '$md', maxWidth: '40rem' }}>
       <Button>Standard</Button>
       <Button scheme="primary">Primary</Button>
+      <Button scheme="outline">Outline</Button>
       <Button scheme="ghost">Ghost</Button>
     </Stack>
   )

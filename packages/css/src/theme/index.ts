@@ -25,6 +25,8 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
   } as Record<string, string>
 
   const lightThemeVariables = {
+    '--outline-color': colors.gray200,
+    '--outline-color-light': colors.gray50,
     '--link-color': colors.primary400,
     '--default-text-color': colors.gray700,
     '--default-text-body-color': colors.gray600,
@@ -49,6 +51,8 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
   }
 
   const darkThemeVariables = {
+    '--outline-color': colors.gray500,
+    '--outline-color-light': colors.gray700,
     '--link-color': colors.primary200,
     '--default-text-color': colors.gray50,
     '--default-text-body-color': colors.gray100,
@@ -187,7 +191,8 @@ export const composeExoTheme = (themeProps?: CreateExpoThemeProps): CreateExoThe
         tooltip: '0 0 0.5rem rgba(0, 0, 0, 0.2)',
         inputDefault: `0 0 0 1px var(--default-input-border-default)`,
         inputHover: `0 0 0 1px var(--default-input-border-active)`,
-        inputFocus: `0 0 0 2px var(--default-input-border-active)`
+        inputFocus: `0 0 0 2px var(--default-input-border-active)`,
+        elevated: `0 0.125rem 0.25rem var(--outline-color)`
       },
       zIndices: {
         hide: -1,

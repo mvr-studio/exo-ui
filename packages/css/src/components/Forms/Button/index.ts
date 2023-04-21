@@ -54,6 +54,17 @@ export const buttonStyles = {
           backgroundColor: 'var(--primary-button-background-active)'
         }
       },
+      outline: {
+        backgroundColor: 'transparent',
+        border: '1px solid',
+        borderColor: 'var(--outline-color)',
+        '&:hover': {
+          backgroundColor: 'var(--default-button-background-hover)'
+        },
+        '&:active': {
+          backgroundColor: 'var(--default-button-background-active)'
+        }
+      },
       ghost: {
         backgroundColor: 'transparent',
         '&:hover': {

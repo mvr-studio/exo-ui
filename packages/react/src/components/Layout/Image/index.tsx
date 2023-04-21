@@ -1,6 +1,7 @@
-import React from 'react'
+import React, { useMemo } from 'react'
 import * as AvatarPrimitive from '@radix-ui/react-avatar'
 import { ComponentFactory } from '../../../types'
+import easyMeshGradient from 'easy-mesh-gradient'
 
 export const composeImage = ({ styled }: ComponentFactory) => {
   const ImageRoot = styled(AvatarPrimitive.Root, {
@@ -29,11 +30,18 @@ export const composeImage = ({ styled }: ComponentFactory) => {
     src?: string
     fallback?: React.ReactNode
     fallbackDelay?: number
+    // Seed for the gradient generation.
+    gradient?: string | undefined
   }
-  return ({ src, fallback, fallbackDelay = 600, ...rest }: ImageProps) => (
-    <ImageRoot {...rest}>
-      {src && <Image src={src} />}
-      {fallback && <ImageFallback>{fallback}</ImageFallback>}
-    </ImageRoot>
-  )
+  return ({ src, fallback, fallbackDelay = 600, gradient, ...rest }: ImageProps) => {
+    const backgroundImage = useMemo(() => gradient && easyMeshGradient({ seed: gradient, pointCount: 3 }), [gradient])
+    console.log(backgroundImage)
+
+    return (
+      <ImageRoot {...rest} css={{ ...rest.css, backgroundImage }}>
+        {src && <Image src={src} />}
+        {fallback && <ImageFallback>{fallback}</ImageFallback>}
+      </ImageRoot>
+    )
+  }
 }
