@@ -13,12 +13,12 @@ export const Default: Story = () => {
 }
 
 export const Horizontal: Story = () => {
-  const { Stack } = createExoUi()
+  const { HStack } = createExoUi()
   return (
-    <Stack direction="horizontal" css={{ gap: '$md' }}>
+    <HStack css={{ gap: '$md' }}>
       <span>First element</span>
       <span>Second element</span>
-    </Stack>
+    </HStack>
   )
 }
 

@@ -12,6 +12,7 @@ export const createExoUi = (themeProps?: types.CreateExpoThemeProps) => {
     Flex: components.composeFlex({ styled, css, theme }),
     Button: components.composeButton({ styled, css, theme }),
     Stack: components.composeStack({ styled, css, theme }),
+    HStack: components.composeHStack({ styled, css, theme }),
     Modal: components.composeModal({ styled, css, theme }),
     Input: components.composeInput({ styled, css, theme }),
     Select: components.composeSelect({ styled, css, theme }),
